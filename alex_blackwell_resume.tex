@@ -49,6 +49,12 @@
   }
 }
 
+\newcommand{\project}[3]{
+  \item\small{
+    \textbf{#1} \href{#2}{\textit{(code link)}}{\textbf{:} #3 \vspace{-2pt}}
+  }
+}
+
 \newcommand{\resumeEducationHeading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -57,7 +63,16 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeWorkExperience}[3]{
+\newcommand{\resumeWorkExperience}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{#2} \\
+      #3 \\
+      \textit{\small#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeWorkExperienceLight}[3]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \textit{#2} \\
@@ -65,11 +80,10 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-
-\newcommand{\resumeSubheading}[4]{
+\newcommand{\resumeSubheading}[1]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+      \textbf{#1} \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -115,7 +129,7 @@
 \section{Overview}
   \resumeSubHeadingListStart
     \resumeItem{Dean's Honour Roll}
-	{Simon Fraser University, Faculty of Applied Sciences}
+	{Simon Fraser University, Faculty of Applied Sciences, Spring 2020}
     \resumeItem{Simon Fraser University Open Scholarship}
 	{Scholarship for academic achievement}
     \resumeItem{Simon Fraser Hacking and Cybersecurity Club}
@@ -145,33 +159,30 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Python Projects}{}
-      {}{}
+      {Python Projects}
       \resumeItemListStart
-        \resumeItem{Virtual Assistant}
-          {A voice-driven bot using the Google Web Speech API with features such as conversational responses and setting timers.}
-        \resumeItem{Copy Paste Anything}
+        \project{Copy Paste Anything} {https://github.com/Alex0Blackwell/copy-paste-anything}
           {Utilizing a Python GUI, a screen snip can be taken and, using computer vision, the text is extracted and copied to the clipboard.}
+        \project{Virtual Assistant} {https://github.com/Alex0Blackwell/virtual-assistant}
+          {A voice-driven bot using the Google Web Speech API with features such as conversational responses and setting timers.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {JavaScipt Projects}{}
-      {}{}
+      {JavaScipt Projects}
       \resumeItemListStart
-        \resumeItem{Merge Sort Visualizer}
+        \project{Merge Sort Visualizer} {https://github.com/Alex0Blackwell/merge-sort-visualizer}
           {Gives a visual representation of the merge sort algorithm by sorting columns of differing heights in ascending order.}
-        \resumeItem{QR-Code Converter Chrome Extension}
+        \project{QR-Code Converter Chrome Extension} {https://github.com/Alex0Blackwell/qr-code-extension}
           {Takes pasted text content and converts it into a QR-code to be displayed in the extension's window.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {C/C++ Projects}{}
-      {}{}
+      {C/C++ Projects}
       \resumeItemListStart
-        \resumeItem{CSS Minifier}
+        \project{CSS Minifier} {https://github.com/Alex0Blackwell/css-minify}
           {Given a CSS file, the spaces, line breaks, and comments are removed and a new, minified file is created.}
-        \resumeItem{Data Structure Implementations}
-          {Implementations of: binary search tree, singly linked list, queue, red black binary tree, stack, double ended queue, and binary heap.}
+        % \resumeItem{Data Structure Implementations}
+        %   {Implementations of: binary search tree, singly linked list, queue, red black binary tree, stack, double ended queue, and binary heap.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -180,12 +191,12 @@
 \section{Work Experience}
   \resumeSubHeadingListStart
     \resumeWorkExperience
-	{Freelance Website Developer} {Summer of 2020}
-	{Fiverr, Remote}
-    \resumeWorkExperience
+	{Freelance Website Developer} {Summers of 2020}
+	{Developed websites using Bootstrap, JavaScript, HTML/CSS, and Wordpress.} {Fiverr, Remote}
+    \resumeWorkExperienceLight
 	{Skate Instructor} {Winters of 2016 -- 2019}
 	{North Vancouver Recreation Commission, North Vancouver, B.C.}
-    \resumeWorkExperience
+    \resumeWorkExperienceLight
 	{Park Ambassador} {Summers of 2016 -- 2019}
 	{Capilano Suspension Bridge Park, North Vancouver, B.C.}
   \resumeSubHeadingListEnd
