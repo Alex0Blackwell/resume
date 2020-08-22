@@ -8,6 +8,6 @@ Feel free to use my résumé as a template! :smiley:
 ## Résumé
 
 <p align="center">
-<a href="https://alexblackwell.ca/">
+<a href="https://github.com/Alex0Blackwell/resume/blob/master/alex_blackwell_resume.pdf">
 <img src="./.pictures/resume.png"/>
 </a>
