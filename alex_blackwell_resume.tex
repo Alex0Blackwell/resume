@@ -3,7 +3,8 @@
 % Author : Alex Blackwell
 %------------------------
 
-\documentclass[letterpaper, 12pt]{article}
+\documentclass[letterpaper, 10pt]{article}
+\usepackage{fontawesome}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -38,7 +39,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-5pt}\scshape\raggedright\large
+  \vspace{0pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 %-------------------------
@@ -51,7 +52,7 @@
 
 \newcommand{\project}[3]{
   \item\small{
-    \textbf{#1} \href{#2}{\textit{(code link)}}{\textbf{:} #3 \vspace{-2pt}}
+    \textbf{#1}\href{#2}{\textit{(\underline{code link})}}{\textbf{:} #3 \vspace{-2pt}}
   }
 }
 
@@ -63,21 +64,27 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeWorkExperience}[4]{
+\newcommand{\resumeWorkExperience}[5]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textit{#2} \\
-      #3 \\
-      \textit{\small#4} \\
+      \textbf{#1} & \textit{#2}\\
     \end{tabular*}\vspace{-5pt}
+    \begin{itemize}
+        \item #3
+        \item #4
+        \item #5
+    \end{itemize}
 }
 
-\newcommand{\resumeWorkExperienceLight}[3]{
+\newcommand{\resumeWorkExperienceLight}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \textit{#2} \\
       \textit{\small#3} \\
     \end{tabular*}\vspace{-5pt}
+    \begin{itemize}
+        \item #4
+    \end{itemize}
 }
 
 \newcommand{\resumeSubheading}[1]{
@@ -110,10 +117,75 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\huge Alex Blackwell} & Email : \href{mailto:alex.blackwell@shaw.ca}{alex.blackwell@shaw.ca}\\
-  \href{https://alexblackwell.ca/}{https://alexblackwell.ca/} & Mobile : 604-767-4611 \\
+  \textbf{\huge Alex Blackwell} & Email: \href{mailto:alex_blackwell@sfu.ca}{alex\_blackwell@sfu.ca}\\
+  \href{https://alexblackwell.ca/}{\faHome alexblackwell.ca}
+  \href{https://github.com/Alex0Blackwell}{\faGithub GitHub}
+  \href{https://www.linkedin.com/in/alex-blackwell/}{\faLinkedin LinkedIn} & Phone: 604-767-4611 \\
   & Vancouver, B.C. Canada
 \end{tabular*}
+
+
+%------------OVERVIEW----------------
+\section{Achievements}
+  \resumeSubHeadingListStart
+    \resumeItem{Dean's Honour Roll}
+	{Simon Fraser University, Faculty of Applied Sciences, Spring 2020}
+    \resumeItem{Simon Fraser University Open Scholarship}
+	{Scholarship for academic achievement}
+    \resumeItem{Second place in Simon Fraser Coding Competition}
+	{Hosted by S.F.U. competitive programming club}
+    \resumeItem{Google Kickstart Top 35 in Canada}
+	{Google Kickstart Coding Competition 22/08/2020}
+    \resumeItem{Simon Fraser Hacking and Cybersecurity Club}
+	{Learning ethical penetration testing on Kali Linux}
+  \resumeSubHeadingListEnd
+
+
+%--------Technical Skills------------
+\section{Technical Skills}
+  \resumeSubHeadingListStart
+    \resumeItem{Languages}
+	{C++, Python, JavaScript, C}
+    \resumeItem{Technologies}
+	{HTML/CSS, Git, Unix command line, jQuery, React, Node.js, Continuous Integration, Jest Testing framework}
+	\resumeItem {Applications}
+	{GitHub, GitLab, Unity, Adobe Suite, Microsoft Office Suite, VIM, \LaTeX, WordPress, Jekyll}
+    \resumeItem{Operating Systems}
+	{GNU/Linux (Manjaro, Ubuntu, Kali), Windows, MacOS}
+  \resumeSubHeadingListEnd
+
+
+%-----------Personal Projects---------------
+\section{Personal Projects}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Python Projects}
+      \resumeItemListStart
+        \project{Desktop Application -- “Copy Paste Anything"} {https://github.com/Alex0Blackwell/copy-paste-anything}
+          {Utilizing a Python GUI, a screen snip is taken and, using a computer vision algorithm, the text is extracted and copied to the clipboard.}
+        \project{Terminal command -- “Tree"} {https://github.com/Alex0Blackwell/tree}
+          {Developed recursive algorithm for traversing and displaying the file structure from the current working directory.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {JavaScipt Projects}
+      \resumeItemListStart
+        \project{Website -- “Merge Sort Visualizer"} {https://github.com/Alex0Blackwell/merge-sort-visualizer}
+          {Programmed a responsive and scalable Bootstrap website with asynchronous JavaScript capable of visually representing the process of a merge sort algorithm.}
+        \project{Browser Extension -- “QR-Code Generator"} {https://github.com/Alex0Blackwell/qr-code-extension}
+          {Worked in a team to develop a browser extension during System Hacks 2020, a twelve hour Hack-a-thon.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {C++ Projects}
+      \resumeItemListStart
+        \project{Terminal Application -- “CSS Minifier"} {https://github.com/Alex0Blackwell/css-minify}
+          {Developed an efficient algorithm capable of producing equivalent code with a lesser file size, thereby increasing the speed of website loading times.}
+        \project{Data Structures} {https://github.com/Alex0Blackwell/c-cpp-DSA}
+          {Implemented binary search tree, singly linked list, queue, red black binary tree, stack, double ended queue, and binary heap to better understand the abstractions of common data structures.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
 
 %-----------EDUCATION----------------
@@ -125,80 +197,27 @@
   \resumeSubHeadingListEnd
 
 
-%------------OVERVIEW----------------
-\section{Overview}
-  \resumeSubHeadingListStart
-    \resumeItem{Dean's Honour Roll}
-	{Simon Fraser University, Faculty of Applied Sciences, Spring 2020}
-    \resumeItem{Simon Fraser University Open Scholarship}
-	{Scholarship for academic achievement}
-    \resumeItem{Simon Fraser Hacking and Cybersecurity Club}
-	{Member of the club since September 2019}
-    \resumeItem{Simon Fraser Competitive Programming Club}
-	{Member of the club since August 2020}
-    \resumeItem{Google Kickstart Top 35 in Canada}
-	{Google Kickstart Coding Competition 22/08/2020}
-    \resumeItem{System Hacks 2020 Hackathon Participant}
-	{Participated in twelve-hour hackathon}
-  \resumeSubHeadingListEnd
-
-
-
-%--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
-  \resumeSubHeadingListStart
-    \resumeItem{Languages}
-	{C++, Python, JavaScript, C}
-    \resumeItem{Technologies}
-	{HTML/CSS, GNU/Linux, Git, Unix command line, React, Adobe Suite, \LaTeX}
-  \resumeSubHeadingListEnd
-
-
-%-----------Skills---------------
-\section{Personal Projects}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {Python Projects}
-      \resumeItemListStart
-        \project{Copy Paste Anything} {https://github.com/Alex0Blackwell/copy-paste-anything}
-          {Utilizing a Python GUI, a screen snip can be taken and, using computer vision, the text is extracted and copied to the clipboard.}
-        \project{Virtual Assistant} {https://github.com/Alex0Blackwell/virtual-assistant}
-          {A voice-driven bot using the Google Web Speech API with features such as conversational responses and setting timers.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {JavaScipt Projects}
-      \resumeItemListStart
-        \project{Merge Sort Visualizer} {https://github.com/Alex0Blackwell/merge-sort-visualizer}
-          {Gives a visual representation of the merge sort algorithm by sorting columns of differing heights in ascending order.}
-        \project{QR-Code Converter Chrome Extension} {https://github.com/Alex0Blackwell/qr-code-extension}
-          {Takes pasted text content and converts it into a QR-code to be displayed in the extension's window.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {C/C++ Projects}
-      \resumeItemListStart
-        \project{CSS Minifier} {https://github.com/Alex0Blackwell/css-minify}
-          {Given a CSS file, the spaces, line breaks, and comments are removed and a new, minified file is created.}
-        % \resumeItem{Data Structure Implementations}
-        %   {Implementations of: binary search tree, singly linked list, queue, red black binary tree, stack, double ended queue, and binary heap.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-
-%-----------WORK-EXPERIENCE-------------
-\section{Work Experience}
+%------TECHNICAL-WORK-EXPERIENCE-----
+\section{Technical Work Experience}
   \resumeSubHeadingListStart
     \resumeWorkExperience
-	{Freelance Website Developer} {Summers of 2020}
-	{Developed websites using Bootstrap, JavaScript, HTML/CSS, and WordPress.} {Fiverr, Remote}
+	{Freelance Website Developer} {Summer of 2020 - Fiverr, Remote}
+	{Worked with clients to develop professional websites which started companies and built online presence.}
+	{Delivered high quality products to clients ahead of schedule, earning an overall rating of five stars.}
+	{Used Bootstrap, JavaScript, HTML/CSS, Git, WordPress and Jekyll.}
+  \resumeSubHeadingListEnd
+
+%------OTHER-WORK-EXPERIENCE-----
+\section{Other Work Experience}
+  \resumeSubHeadingListStart
     \resumeWorkExperienceLight
 	{Skate Instructor} {Winters of 2016 -- 2019}
 	{North Vancouver Recreation Commission, North Vancouver, B.C.}
+	{Responsible for teaching children a new skill by clearly communicating and adapting to areas of struggle.}
     \resumeWorkExperienceLight
 	{Park Ambassador} {Summers of 2016 -- 2019}
 	{Capilano Suspension Bridge Park, North Vancouver, B.C.}
+	{Accountable member of a team that interacted with guests to improve customer experience.}
   \resumeSubHeadingListEnd
 
 \end{document}
