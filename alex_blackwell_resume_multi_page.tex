@@ -1,0 +1,297 @@
+%-------------------------
+% Resume in Latex
+% Author : Alex Blackwell
+%------------------------
+
+\documentclass[letterpaper, 11pt]{article}
+\usepackage{fontawesome}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+
+\pdfinfo{
+    /Author (Alex Blackwell)
+    /Title (Alex Blackwell Resume)
+}
+
+\pagestyle{fancy}
+\fancyhf{}  % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{0pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \small{
+    \textbf{#1}{: #2 \vspace{5pt}} \\
+  }
+}
+
+\newcommand{\project}[2]{
+  \item\small{
+    \href{#2}{\underline{#1}\hspace{3pt}(code link \faExternalLink)}\textbf{:} \vspace{-5pt}
+  }
+  \begin{itemize}
+}
+
+\newcommand{\infoSection}[3]{
+  \vspace{0pt}
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {#2} \\
+      {\small#3} \\
+    \end{tabular*}\vspace{0pt}
+    \begin{itemize}
+}
+
+\newcommand{\resumeEducationHeading}[4]{
+  \vspace{-1pt}
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeWorkExperience}[6]{
+  \vspace{-1pt}
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2\\
+      #3 \\
+    \end{tabular*}\vspace{0pt}
+    \begin{itemize}
+        \item #4
+        \item #5
+        \item #6
+    \end{itemize}
+}
+
+\newcommand{\resumeWorkExperienceLight}[5]{
+  \vspace{-1pt}
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 \\
+    \end{tabular*}\vspace{0pt}
+    \begin{itemize}
+        \item #4
+        \item #5
+    \end{itemize}
+}
+
+\newcommand{\resumeSubheading}[1]{
+  \vspace{-1pt}
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \small #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\projectEnd}{\end{itemize}}
+\newcommand{\infoSectionEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\huge Alex Blackwell} & Email: \href{mailto:alex_blackwell@sfu.ca}{alex\_blackwell@sfu.ca}\\
+  \href{https://alexblackwell.ca/} {\faHome \hspace{0.1cm} alexblackwell.ca}
+  & Phone: 604-767-4611 \\
+  \href{https://github.com/Alex0Blackwell}{\faGithub \hspace{0.1cm} GitHub (github.com/alex0blackwell)}
+  & Vancouver, B.C. Canada \\
+  \href{https://www.linkedin.com/in/alex-blackwell/}{\faLinkedin \hspace{0.1cm} LinkedIn (linkedin.com/in/alex-blackwell)}
+  & Page 1
+
+\end{tabular*}
+
+%--------TECHNICAL-SKILLS------------
+\section{Technical Skills}
+    \resumeItem{Languages}
+	{C++, Python, JavaScript, C}
+    \resumeItem{Technologies}
+	{HTML/CSS, Git, Unix command line, jQuery, Node.js, Continuous Integration, Jest testing framework}
+	\resumeItem {Applications}
+	{GitHub, GitLab, Unity, Adobe Suite, Microsoft Office Suite, VIM, \LaTeX, WordPress, Jekyll}
+    \resumeItem{Operating Systems}
+	{GNU/Linux (Manjaro, Ubuntu, Kali), Windows, MacOS}
+\vspace{-5pt}
+
+%-----------PERSONAL-PROJECTS---------------
+\section{Personal Projects}
+    \resumeSubheading
+      {Python Projects:}
+      \resumeItemListStart
+        \project{Desktop Application -- “Copy Paste Anything"} {https://github.com/Alex0Blackwell/copy-paste-anything}
+          \item{Developed a desktop application to extract all text from any selected area of the screen.}
+          \item{Utilized machine learning character recognition algorithms to accurately determine selected
+          text.}
+          \item{Implemented cross-platform algorithm to automatically save selected text to the clipboard to improve usability.}
+          \item{Developed a Graphical User Interface to easily select any portion of the screen with a mouse cursor to improve user experience.}
+        \projectEnd
+        \project{Terminal command -- “Tree"} {https://github.com/Alex0Blackwell/tree}
+          \item{Developed terminal command to display the file structure from the current working directory.}
+          \item{Created algorithm to determine the most common file type utilizing the efficient look up times of a hashmap.}
+          \item{Engineered recursive algorithm for traversing the file structure resulting in simplified and readable code.}
+        \projectEnd
+      \resumeItemListEnd
+      \vspace{10pt}
+
+    \resumeSubheading
+      {JavaScript Projects:}
+      \resumeItemListStart
+        \project{Website -- “Merge Sort Visualizer"} {https://github.com/Alex0Blackwell/merge-sort-visualizer}
+          \item{Programmed website capable of visually representing the process of a merge sort algorithm.}
+          \item{Used Bootstrap to create a responsive and scalable website to work visually on all devices.}
+          \item{Implemented asynchronous JavaScript code to add timing events without decreasing the responsiveness of the website.}
+        \projectEnd
+        \project{Browser Extension -- “QR-Code Generator"} {https://github.com/Alex0Blackwell/qr-code-extension}
+          \item{Worked in a team to develop a browser extension during the twelve hour Hack-a-thon: System Hacks 2020.}
+          \item{Responsible for converting text to a QR-code that is capable of representing a paragraph.}
+          \item{Worked on both Chrome and Firefox to deploy the extension to become a product.}
+        \projectEnd
+      \resumeItemListEnd
+      \vspace{10pt}
+
+    \resumeSubheading
+      {C++ Projects:}
+      \resumeItemListStart
+        \project{Terminal Application -- “CSS Minifier"} {https://github.com/Alex0Blackwell/css-minify}
+          \item{Developed an algorithm to produce CSS with a lesser file size, reducing website load times and bandwidth usage.}
+          \item{Designed the algorithm to allow for all valid styles of CSS formatting to improve usability for all developers.}
+        \projectEnd
+        \project{Data Structures} {https://github.com/Alex0Blackwell/c-cpp-DSA}
+          \item{Implemented data structures to help understand the abstractions of common data structures.}
+          \item{Implemented: binary search tree, singly linked list, queue, red black binary tree, stack, double ended queue, and binary heap.}
+        \projectEnd
+      \resumeItemListEnd
+
+%------TECHNICAL-WORK-EXPERIENCE-----
+\section{Technical Work Experience}
+    \resumeWorkExperience
+	{Freelance Website Developer} {May to September 2020} {Fiverr, Remote}
+	{Worked with clients to develop professional websites which started companies and built online presence.}
+	{Delivered high quality products to clients ahead of schedule, earning an overall rating of five stars.}
+	{Used Bootstrap, JavaScript, HTML/CSS, Git, WordPress and Jekyll to create and improve professional websites.}
+
+\newpage
+
+
+%----------SECOND-PAGE-HEADING-----------------
+\setstretch{1.14}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\huge Alex Blackwell} & {\normalsize Email: \href{mailto:alex_blackwell@sfu.ca}{alex\_blackwell@sfu.ca}}\\
+  \href{https://alexblackwell.ca/} {\normalsize{\faHome \hspace{0.1cm} alexblackwell.ca}}
+  & {\normalsize Phone: 604-767-4611} \\
+  \href{https://github.com/Alex0Blackwell}{\normalsize{\faGithub \hspace{0.1cm} GitHub (github.com/alex0blackwell)} }
+  & {\normalsize Vancouver, B.C. Canada} \\
+  \href{https://www.linkedin.com/in/alex-blackwell/}{\normalsize{\faLinkedin \hspace{0.1cm} LinkedIn (linkedin.com/in/alex-blackwell)}}
+  & {\normalsize Page 2}
+
+\end{tabular*}
+
+%------OTHER-WORK-EXPERIENCE-----
+\section{Other Work Experience}
+    \resumeWorkExperienceLight
+	{Skate Instructor} {September to May of 2016 -- 2019}
+	{North Vancouver Recreation Commission, North Vancouver, B.C.}
+	{Responsible for teaching children a new skill by clearly communicating and adapting to areas of struggle.}
+	{Created a schedule for groups requiring time management for teaching classes.}
+	\vspace{10pt}
+
+    \resumeWorkExperienceLight
+	{Park Ambassador} {May to September of 2016 -- 2019}
+	{Capilano Suspension Bridge Park, North Vancouver, B.C.}
+	{Accountable member of a team that interacted with guests to improve customer experience.}
+	{Responsible for calming upset or unnerved guests at the park and providing solutions to their problems.}
+
+
+%------EXTRA-CURRICULAR-ACTIVITIES-----
+\section{Extra Curricular Activities}
+    \infoSection
+    {Simon Fraser Competitive Programming Club} {September 2020 -- Present}
+    {Simon Fraser University, Burnaby, B.C.}
+      \item Program in weekly competitions to improve competitive programming skills.
+      \item Compete against computing science students to improve the speed and efficiency of solving problems.
+      \item Study weekly lectures on algorithms and data structures to learn new methods and improve old methods of solving problems.
+    \infoSectionEnd
+    \vspace{10pt}
+    \infoSection
+    {Simon Fraser Hacking and Cybersecurity Club} {September 2019 -- Present}
+    {Simon Fraser University, Burnaby, B.C.}
+      \item Using a Kali Linux virtual machine to take advantage of cybersecurity tools native to the operating system.
+      \item Utilized the Metasploit penetration testing framework to identify vulnerabilities.
+      \item Tested Metasploit commands on the vulnerable virtual machine Metasploitable to ethically learn penetration testing.
+    \infoSectionEnd
+
+
+%-----------EDUCATION--------------
+\section{Education}
+    \resumeEducationHeading
+      {Simon Fraser University}{Burnaby, B.C. Canada}
+      {Computing Science;  GPA: 3.75}{September 2019 -- Present}
+
+%-------HONOURS-AND-AWARDS---------
+\section{Honours and Awards}
+    \resumeItem{Dean's Honour Roll}
+	{Simon Fraser University, Faculty of Applied Sciences, Spring 2020 -- Present}
+    \resumeItem{Simon Fraser University Open Scholarship}
+	{Scholarship for academic achievement, Spring 2020 -- Present}
+    \resumeItem{Second place in Simon Fraser Coding Competition}
+	{Hosted by S.F.U. competitive programming club, 02/09/2020}
+    \resumeItem{Google Kickstart Top 35 in Canada}
+	{Google Kickstart Coding Competition, 22/08/2020}
+
+%-----------INTERESTS------------
+\section{Interests}
+    \resumeItem{Open source software development}
+    {Enjoy contributing to software on GitHub and creating new projects.}
+    \resumeItem{Image recognition machine learning}
+    {Amateur photographer and enjoy seeing the combination of two interests.}
+    \resumeItem{GNU/Linux operating systems}
+    {Spend time trying new operating systems and creating new desktop environments.}
+
+\end{document}
